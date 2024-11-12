@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/tutorial-page.css">
+    <title>Tutorial Page</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../js/bootstrap.min.js">
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Gitorial</label>
+        <ul>
+            <li><a href="../html/landing-page.html">Home</a></li>
+            <li><a href="../html/landing-page.html#About">About</a></li>
+            <li><a href="../html/landing-page.html#Team">Team</a></li>
+            <li>
+                <a href="#Team" class="user-icon">
+                    <img class="user" src="../images/guy.png" alt="User Icon"">
+                    <span id="userName" class="user-name">UserName</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="tutorial">
+        <div class="container">
+            <div class="toggle-button-section">
+                <button class="toggle-button" aria-label="Toggle Sidebar">→</button>
+            </div>
+
+            <div class="sidebar">
+                <p class="nav-button section-header" href="#section1" data-page="page1">Introduction To Git</p>
+                <a class="nav-button nav-btn-style" href="#section1" data-page="page1">What is Version Control?</a>
+                <a class="nav-button nav-btn-style" href="#section2" data-page="page1">Why Use Git</a>
+                <a class="nav-button nav-btn-style" href="#section3" data-page="page1">Basic Git Terminology</a>
+                <a class="nav-button nav-btn-style" href="#section4" data-page="page1">Test Your Knowledge</a>
+
+                <p class="nav-button section-header" href="#section5" data-page="page2">Setting Up Git</p>
+                <a class="nav-button nav-btn-style" href="#section5" data-page="page2">Installing Git</a>
+                <a class="nav-button nav-btn-style" href="#section6" data-page="page2">Configuring Git</a>
+                <a class="nav-button nav-btn-style" href="#section7" data-page="page2">Creating a New Repository</a>
+                <a class="nav-button nav-btn-style" href="#section8" data-page="page2">Test Your Knowledge</a>
+
+                <p class="nav-button section-header" href="#section9" data-page="page3">Basic Git Commands</p>
+                <a class="nav-button nav-btn-style" href="#section9" data-page="page3">git init: Initializing a Repository</a>
+                <a class="nav-button nav-btn-style" href="#section10" data-page="page3">git clone: Cloning an Existing Repository</a>
+                <a class="nav-button nav-btn-style" href="#section11" data-page="page3">git add: Adding Files to the Staging Area</a>
+                <a class="nav-button nav-btn-style" href="#section12" data-page="page3">git commit: Committing Changes</a>
+                <a class="nav-button nav-btn-style" href="#section13" data-page="page3">Test Your Knowledge</a>
+
+                <p class="nav-button section-header" href="#section14" data-page="page4">Working with Branches</p>
+                <a class="nav-button nav-btn-style" href="#section14" data-page="page4">git branch: Creating and Listing Branches</a>
+                <a class="nav-button nav-btn-style" href="#section15" data-page="page4">git merge: Merging Branches</a>
+                <a class="nav-button nav-btn-style" href="#section16" data-page="page4">Test Your Knowledge</a>
+            </div>
+
+            <div class="main-content">
+                <div>
+                    <div id="section1" class="content page1">
+                        <h1>Introduction to Git</h1>
+                        <h2>What is Version Control?</h2>
+                        <p>Imagine a writer working on a novel. They start with a blank page, and as they write, they save multiple drafts. Each draft is a different version of the novel, capturing changes and improvements made over time.</p>
+                        
+                        <div class="windows">
+                            <h2 style="color: black;">Why is it important?</h2>
+                        </div>
+
+                        <ul class="lists" style="margin-left: 30px;">
+                            <li>Tracking Changes: See the history of changes made to a file or project.</li>
+                            <li>Reverting to Previous Versions: Undo mistakes or experiment with different approaches.</li>
+                            <li>Collaborating Effectively: Multiple people can work on the same project simultaneously without conflicts.</li>
+                            <li>Branching and Merging: Create separate development lines and combine them later.</li>
+                        </ul>
+                    </div>
+
+                    <div id="section2" class="content page1">
+                        <h2>Why Use Git?</h2>
+                        <p>Git, a powerful version control system, offers numerous benefits for both individual developers and
+                            teams. Here are some key reasons why you should consider using Git:</p>
+                        
+                        <h2 style="color: black;">Why is it important?</h2>
+                        <li>
+                            <strong>1. Tracking Changes</strong>
+                            <ul style="margin-left: 30px;margin-bottom: 20px;">
+                                <li>Clear History: Git keeps a detailed record of every change made to your project, including
+                                    who made the change, when, and why.</li>
+                                <li>Time Travel: You can easily revert to previous versions of your code, which is invaluable
+                                    for debugging or experimenting with different approaches.</li>
+                            </ul>
+                        
+                            <strong>2. Collaboration</strong>
+                            <ul style="margin-left: 30px;margin-bottom: 20px;">
+                                <li>Simultaneous Work: Multiple developers can work on the same project without interfering
+                                    with each other’s work.</li>
+                                <li>Conflict Resolution: Git has effective tools to resolve merge conflicts, ensuring smooth
+                                    collaboration.</li>
+                                <li>Remote Repositories: Share your code and collaborate remotely using platforms like GitHub,
+                                    GitLab, or Bitbucket.</li>
+                            </ul>
+                        
+                            <strong>3. Experimentation</strong>
+                            <ul style="margin-left: 30px;margin-bottom: 20px;">
+                                <li>Branching: Create separate branches to work on new features or bug fixes without affecting
+                                    the main codebase.</li>
+                                <li>Risk-Free Development: Experiment freely, and if something goes wrong, discard the branch.
+                                </li>
+                            </ul>
+                            
+                            <strong>4. Backup and Security</strong>
+                            <ul style="margin-left: 30px;margin-bottom: 20px;">
+                                <li>Regular Backups: Git automatically backs up your code, minimizing data loss risks.</li>
+                                <li>Secure Storage: Remote repositories provide a secure way to store your code.</li>
+                            </ul>
+                        
+                        </li>
+                        <p>In essence, Git empowers you to work efficiently, collaborate seamlessly, and manage your projects with confidence.</p>
+                    </div>
+
+                    <div id="section3" class="content page1">
+                        <h2>Basic Git Terminology (Repository, Commit, Branch, Merge)</h2>
+                        <p>To effectively use Git, it's essential to understand some fundamental terms:</p>
+                        <div class="group">
+                            <h3>Repository</h3>
+                            <p>A repository is a directory that contains all the files and directories of a project, along with the Git history of those files. <br>
+                                It's like a central hub for your project, where all the versions and changes are stored.</p>
+                        
+                            <h3>Commit</h3>
+                            <p>A commit is a snapshot of your project at a specific point in time. <br>
+                                Each commit has a unique identifier, a timestamp, and a message describing the changes made. <br>
+                                Commits are the building blocks of your project's history. </p>
+                        
+                            <h3>Branch</h3>
+                            <p>A branch is a separate line of development within your repository. <br>
+                                You can create multiple branches to work on different features or bug fixes simultaneously. <br> This allows you to experiment and make changes without affecting the main development.</p>
+                        
+                            <h3>Merge</h3>
+                            <p>Merging is the process of combining changes from one branch into another. <br>
+                                When you're finished working on a feature branch, you can merge it back into the main branch to incorporate the changes. <br>
+                                Git provides tools to help resolve conflicts that may arise during the merge process.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="section4" class="content page1">
+                        <h2>Test Your Knowledge 15 questions</h2>
+                        <p>Assess yourself with all you’ve learnt and see if you understand everything!</p>
+                        <div class="module">
+                            <h4>Question from Module 1 : Introduction to Git</h4>
+                            <form class="quizForm" onsubmit="return checkAnswers(event, 0);">
+                                <!-- Question 1 -->
+                                <div class="options">
+                                    <h6>1</h6>
+                                    <p>What is the primary purpose of version control?</p>
+                                    <label class="custom-radio"><input type="radio" name="q1" value="A"><span class="radio-mark"></span>To store files on a cloud server</span></label><br>
+                                    <label class="custom-radio"><input type="radio" name="q1" value="B"><span class="radio-mark"></span>To manage different versions of files and track changes</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q1" value="C"><span class="radio-mark"></span>To enhance the speed of file transfers</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q1" value="D"><span class="radio-mark"></span>To create backups of files</label><br>
+                                    <p class="answer" data-answer="q1">Correct Answer: B</p>
+                                </div>
+                                <!-- Question 2 -->
+                                <div class="options">
+                                    <h6>2</h6>
+                                    <p>Why is tracking changes important in version control?</p>
+                                    <label class="custom-radio"><input type="radio" name="q2" value="A"><span class="radio-mark"></span>It allows users to see how many files are in a project</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q2" value="B"><span class="radio-mark"></span>It helps in understanding the history of changes made to a file or project</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q2" value="C"><span class="radio-mark"></span>It provides a way to delete old files permanently</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q2" value="D"><span class="radio-mark"></span>It ensures that all users have the same file version</label><br>
+                                    <p class="answer" data-answer="q2">Correct Answer: B</p>
+                                </div>
+                                <!-- Question 3 -->
+                                <div class="options">
+                                    <h6>3</h6>
+                                    <p>What does reverting to a previous version allow a user to do?</p>
+                                    <label class="custom-radio"><input type="radio" name="q3" value="A"><span class="radio-mark"></span>Save the file in a different format</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q3" value="B"><span class="radio-mark"></span>Remove all changes made to a file</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q3" value="C"><span class="radio-mark"></span>Undo mistakes or experiment with different approaches</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q3" value="D"><span class="radio-mark"></span>Increase the file size</label><br>
+                                    <p class="answer" data-answer="q3">Correct Answer: C</p>
+                                </div>
+                                <!-- Question 4 -->    
+                                <div class="options">
+                                    <h6>4</h6>
+                                    <p>How does version control facilitate collaboration among developers?</p>
+                                    <label class="custom-radio"><input type="radio" name="q4" value="A"><span class="radio-mark"></span>It allows only one person to edit a file at a time</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q4" value="B"><span class="radio-mark"></span>It prevents changes from being made by multiple users</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q4" value="C"><span class="radio-mark"></span>It enables multiple people to work on the same project simultaneously without conflicts</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q4" value="D"><span class="radio-mark"></span>It requires all users to work offline</label><br>
+                                    <p class="answer" data-answer="q4">Correct Answer: C</p>
+                                </div>
+                                <!-- Question 5 -->
+                                <div class="options">
+                                    <h6>5</h6>
+                                    <p>What is the benefit of branching in version control?</p>
+                                    <label class="custom-radio"><input type="radio" name="q5" value="A"><span class="radio-mark"></span>It creates duplicates of the entire project</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q5" value="B"><span class="radio-mark"></span>It allows developers to create separate development lines that can be merged later</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q5" value="C"><span class="radio-mark"></span>It limits the number of changes that can be made</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q5" value="D"><span class="radio-mark"></span>It eliminates the need for collaboration</label><br>
+                                    <p class="answer" data-answer="q5">Correct Answer: B</p>
+                                </div>
+                                <!-- Question 6 -->
+                                <div class="options">
+                                    <h6>6</h6>
+                                    <p>What is one of the main advantages of tracking changes in Git?</p>
+                                    <label class="custom-radio"><input type="radio" name="q6" value="A"><span class="radio-mark"></span>It allows for unlimited file storage</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q6" value="B"><span class="radio-mark"></span>It provides a clear history of changes made to a project</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q6" value="C"><span class="radio-mark"></span>It enhances the appearance of code files</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q6" value="D"><span class="radio-mark"></span>It compresses files to save space</label><br>
+                                    <p class="answer" data-answer="q6">Correct Answer: B</p>
+                                </div>
+                                <!-- Question 7 -->
+                                <div class="options">
+                                    <h6>7</h6>
+                                    <p>How does Git facilitate collaboration among developers?</p>
+                                    <label class="custom-radio"><input type="radio" name="q7" value="A"><span class="radio-mark"></span>By allowing only one developer to work on a project at a time</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q7" value="B"><span class="radio-mark"></span>By preventing developers from sharing their code</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q7" value="C"><span class="radio-mark"></span>By enabling multiple developers to work simultaneously without conflicts</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q7" value="D"><span class="radio-mark"></span>By eliminating the need for version control</label><br>
+                                    <p class="answer" data-answer="q7">Correct Answer: C</p>
+                                </div>
+                                <!-- Question 8 -->
+                                <div class="options">
+                                    <h6>8</h6>
+                                    <p>What feature of Git allows developers to experiment with new features safely?</p>
+                                    <label class="custom-radio"><input type="radio" name="q8" value="A"><span class="radio-mark"></span>Merging</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q8" value="B"><span class="radio-mark"></span>Stashing</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q8" value="C"><span class="radio-mark"></span>Branching</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q8" value="D"><span class="radio-mark"></span>Cloning</label><br>
+                                    <p class="answer" data-answer="q8">Correct Answer: C</p>
+                                </div>
+                                <!-- Question 9 -->
+                                    <div class="options">
+                                    <h6>9</h6>
+                                    <p>What does Git provide to help with conflict resolution during collaboration?</p>
+                                    <label class="custom-radio"><input type="radio" name="q9" value="A"><span class="radio-mark"></span>Manual editing of all files</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q9" value="B"><span class="radio-mark"></span>Tools to resolve merge conflicts effectively</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q9" value="C"><span class="radio-mark"></span>Automatic deletion of conflicting files</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q9" value="D"><span class="radio-mark"></span>A lock on file access for all developers</label><br>
+                                    <p class="answer" data-answer="q9">Correct Answer: B</p>
+                                </div>
+                                <!-- Question 10 -->
+                                <div class="options">
+                                    <h6>10</h6>
+                                    <p>How does Git ensure the security and backup of your code?</p>
+                                    <label class="custom-radio"><input type="radio" name="q10" value="A"><span class="radio-mark"></span>By encrypting all files on the local system</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q10" value="B"><span class="radio-mark"></span>By automatically backing up your code and providing secure remote storage</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q10" value="C"><span class="radio-mark"></span>By requiring manual backups every week</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q10" value="D"><span class="radio-mark"></span>By limiting access to only the project owner</label><br>
+                                    <p class="answer" data-answer="q10">Correct Answer: B</p>
+                                </div>
+                                <!-- Question 11 -->
+                                    <div class="options">
+                                    <h6>11</h6>
+                                    <p>What is a repository in Git?</p>
+                                    <label class="custom-radio"><input type="radio" name="q11" value="A"><span class="radio-mark"></span>A tool for editing files</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q11" value="B"><span class="radio-mark"></span>A directory that contains all project files and Git history</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q11" value="C"><span class="radio-mark"></span>A feature for tracking changes in code</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q11" value="D"><span class="radio-mark"></span>A method for compressing files</label>
+                                    <p class="answer" data-answer="q11">Correct Answer: B</p>
+                                </div>
+                                <!-- Question 12 -->
+                                <div class="options">
+                                    <h6>12</h6>
+                                    <p>What does a commit represent in a Git project?</p>
+                                    <label class="custom-radio"><input type="radio" name="q12" value="A"><span class="radio-mark"></span>The final version of a project</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q12" value="B"><span class="radio-mark"></span>A snapshot of the project at a specific point in time</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q12" value="C"><span class="radio-mark"></span>A backup of all project files</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q12" value="D"><span class="radio-mark"></span>A tool for merging branches</label>
+                                    <p class="answer" data-answer="q12">Correct Answer: B</p>
+                                </div>
+                                <!-- Question 13 -->
+                                <div class="options">
+                                    <h6>13</h6>
+                                    <p>How does a branch function in Git?</p>
+                                    <label class="custom-radio"><input type="radio" name="q13" value="A"><span class="radio-mark"></span>It deletes old versions of files</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q13" value="B"><span class="radio-mark"></span>It combines different files into one</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q13" value="C"><span class="radio-mark"></span>It allows separate lines of development within a repository</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q13" value="D"><span class="radio-mark"></span>It restricts access to certain files</label>
+                                    <p class="answer" data-answer="q13">Correct Answer: C</p>
+                                </div>
+                                <!-- Question 14 -->
+                                <div class="options">
+                                    <h6>14</h6>
+                                    <p>What is the purpose of merging in Git?</p>
+                                    <label class="custom-radio"><input type="radio" name="q14" value="A"><span class="radio-mark"></span>To create a new repository</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q14" value="B"><span class="radio-mark"></span>To delete a branch</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q14" value="C"><span class="radio-mark"></span>To combine changes from one branch into another</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q14" value="D"><span class="radio-mark"></span>To list all commits in a project</label>
+                                    <p class="answer" data-answer="q14">Correct Answer: C</p>
+                                </div>
+                                <!-- Question 15 -->
+                                <div class="options" style="margin-bottom: 30px;border-radius: 5px;">
+                                    <h6>15</h6>
+                                    <p>Why is understanding these core concepts important for using Git effectively?</p>
+                                    <label class="custom-radio"><input type="radio" name="q15" value="A"><span class="radio-mark"></span>They help you choose the right programming language</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q15" value="B"><span class="radio-mark"></span>They are crucial for mastering Git and managing projects</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q15" value="C"><span class="radio-mark"></span>They allow you to bypass version control</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q15" value="D"><span class="radio-mark"></span>They make coding faster without understanding</label><br>
+                                    <p class="answer" data-answer="q15">Correct Answer: B</p>
+                                </div>
+                                <div class="down">
+                                <button type="submit" style="padding: 10px 15px;margin-left: 35px; background-color: #ee513b;border-radius: 5px; color: white;border: none;">Submit</button>
+                                <div class="scoreDisplay"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div id="section5" class="content page2">
+                        <h1>Setting Up Git</h1>
+                        <h2>Installing Git</h2>
+                        <p>Git, a powerful version control system, offers numerous benefits for both individual developers and
+                            teams. Here are some key reasons why you should consider using Git:</p>
+                        
+                        <div class="windows">
+                            <h2 style="color: black;">For Windows</h2>
+                            <h4>Download the installer</h4>    
+                            <p>Go to the official Git website (https://git-scm.com/) and download the latest Windows installer.</p>
+                            
+                            <h4>Run the Installer</h4>
+                            <p>Double-click the downloaded installer and follow the on-screen instructions.</p>
+                            
+                            <h4>Accept Defaults</h4>
+                            <p>In most cases, accepting the default options is sufficient</p>
+                            
+                            <h4 style="margin-bottom: 10px;">Finish the Installation:</h4>
+                            <p>Click "Finish" to complete the installation process.</p>
+                        </div>
+                        
+                        <div class="mac">
+                            <h2 style="color: black;">For Mac</h2>
+                            <h4>Homebrew (Recommended):</h4>
+                            <p>If you have Homebrew installed, you can easily install Git using the following command in your terminal:</p>
+                            
+                            <div class="command">
+                                <h4>bash <span style="font-weight: 100;">|</span>brew install git</h4>
+                            </div>
+                            <h3>Direct Download</h3>
+                            <p style="margin-bottom: 10px;">Alternatively, you can download the macOS installer from the Git website and follow the on-screen instructions.</p>
+                        </div>
+                        <div class="linux">
+                            <h2 style="color: black;">For Linux</h>
+                            <h4>Package Manager:</h4>
+                            <p>Most Linux distributions include Git in their package managers. You can install it using the following commands:</p>
+                            <h5>Ubuntu and Debian</h5>
+                            <div class="command">
+                                <h4>bash <span style="font-weight: 100;">|</span>sudo apt-get install git  <span># for Ubuntu/Debian</span></h4>
+                            </div>
+                            <h5>Fedora / CentOS</h5>
+                            <div class="command">
+                                <h4>bash <span style="font-weight: 100;">|</span>sudo dnf install git <span># for Fedora / CentOS</span></h4>
+                            </div>
+                            <p>This command should display the installed Git version.</p>
+                            <h5>Arch Linux</h5>
+                            <div class="command">
+                                <h4>bash <span style="font-weight: 100;">|</span>sudo pacman -S git<span># for Arch Linux</span></h4>
+                            </div>
+                            <p style="margin-bottom: 10px;">After installation, you can verify the installation by opening your terminal and typing:</p>
+                            <div class="command">
+                                <h4>bash <span style="font-weight: 100;">|</span>git --version<span># for Arch Linux</span></h4>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div id="section6" class="content page2">
+                        <h2 style="margin-top: 80px;">Configuring Git (User Information, Editor)</h2>
+                        <p>Before you start using Git, you'll need to configure some basic settings. This involves setting your name an email address, which will be associated with your commits. Addintionally, you can spcify your preferred text editor for writing commit messages.</p>
+                        <h2 style="color: black;">Setting Your User Information</h2>
+                        <p>Open your teminal or command prompt.</p>
+                        <p>Run the following commands, replacing the placeholders with your actual information.</p>
+                        <div class="command" style="margin-bottom: 2px; margin-top: 15px;">
+                            <h4>bash <span style="font-weight: 100;">|</span>git config --global user.name <span style="color:  #5056CE; font-weight: 100;">"Your Name"</span></h4>
+                        </div>
+                        <div class="command" style="margin-bottom: 15px;">
+                            <h4>bash <span style="font-weight: 100;">|</span>git config --global user.email <span style="color:  #5056CE; font-weight: 100;">"Your_email@example.com"</span></h4>
+                        </div>
+                        <p>--global flag: Sets the configuration gobally, meaning it will be used for all your Git repositories.</p>
+                        <h2 style="color: black;">Setting Your Preferred Text Editor</h2>
+                        <p>Run the following command to set your preferred editor:</p>
+                        <div class="command" style="margin-bottom: 10px;">
+                            <h4>bash <span style="font-weight: 100;">|</span>git config --global core.editor <span style="color:  #5056CE; font-weight: 100;">"Your Editor"</span></h4>
+                        </div>
+                        <p>Replace "your_editor" with the name of yoyr editor(e.g., vim, nano, emacs, or Notepad).</p>
+                        <h2 style="color: black;">Verifying Your Configuration</h2>
+                        <p>To check your current configuration, you can run:</p>
+                        <div class="command" style="margin-bottom: 10px;">
+                            <h4>bash <span style="font-weight: 100;">|</span>git config --list <span style="color:  #5056CE; font-weight: 100;">"Your Editor"</span></h4>
+                        </div>
+                        <p>Remember: If you want to set the configuration for a specific repository, omit the --global flag.
+                            By configuring your Git setup, you'll ensure that your commits are properly attributed to you and that you can efficiently write commit messages using your preferred editor.
+                        </p>   
+                    </div>
+                    <div id="section7" class="content page2">
+                        <h2 style="margin-top: 80px;">Creating a New Repository</h2>
+                        <p>A Git repository is a directory that contains all the files and directories of a project, along with the Git history of those files. Here's how to create a new Git repository:</p>
+                        <h2 style="color: black; margin-top: 60px;">Choose a Directory:</h2>
+                        <li>Create a new directory: Use your file explorer or terminal to create a new directory for your project.</li>
+                        <li>Navigate to the directory: Open your terminal and use the cd command to navigate to the directory.Create a new directory: Use your file explorer or terminal to create a new directory for your project.</li>
+                     
+
+
+                        <h2 style="color: black; margin-bottom: 2px; margin-top: 60px;">Initialize the Repository:</h2>
+                        <p>Run the git init command: This command initializes a new Git repository in the current directory.</p>
+                        <div class="command" style="margin-bottom: 10px; margin-top: 10px;">
+                            <h4>bash <span style="font-weight: 100;">|</span>git init <span style="color:  #5056CE; font-weight: 100;">"Your Editor"</span></h4>
+                        </div> 
+                        <p>This command creates a hidden .git directory, which contains all the necessary files for Git to track changes.</p>
+                       
+
+
+                        <h2 style="color: black; margin-top: 60px;">Add Files to the Repository:</h2>
+                        <p style="margin-bottom: 5px;">Stage Files: Use the git add command to stage files that you want to track.</p>
+                        <div class="command" style="margin-bottom: 5px;">
+                            <h4>bash <span style="font-weight: 100;">|</span>git add filename.txt</h4>
+                        </div> 
+                        <p>You can add multiple files at once:</p>
+                          
+                        <div class="command" style="margin-bottom: 10px;">
+                            <h4>bash <span style="font-weight: 100;">|</span>git add file1.txt file2.py file3.css</h4>
+                        </div> 
+                        <p>To add all files in the current directory:</p>
+                        <div class="command" style="margin-bottom: 10px;">
+                            <h4>bash <span style="font-weight: 100;">|</span>git add .</h4>
+                        </div> 
+                        
+
+                        <h2 style="color: black; margin-top: 60px;">Commit Changes:</h2>
+                        <p>Create a Commit: Use the git commit command to create a commit with a descriptive message.</p>
+                        <div class="command" style="margin-bottom: 10px;">
+                            <h4>bash <span style="font-weight: 100;">|</span>git commit -m “Initial commit”</h4>
+                        </div> 
+                        <p>The -m flag allows you to specify a commit message on the command line.</p>
+                        <p style="margin-top: 20px;">Now, you have a new Git repository with your initial commit.</p>
+                          
+
+                        <h2 style="color: black;">Merge</h2>
+                        <p>Merging is the process of combining changes from one branch into another.
+                            When you're finished working on a feature branch, you can merge it back into the main branch to incorporate the changes.
+                            Git provides tools to help resolve conflicts that may arise during the merge process.</p>
+                        <p style="margin-top: 20px;">Understanding these core concepts is crucial for mastering Git and effectively managing your projects.</p>
+                    </div>
+
+                    <div id="section8" class="content page2">
+                        <h2>Test Your Knowledge With These Questions</h2>
+                        <p>Assess yourself with all you’ve learnt and see if you understand everything!</p> 
+                        <div class="module">
+                            <h4>Question from Module 2 : Setting Up Git</h4>
+                            <form class="quizForm" onsubmit="return checkAnswers(event, 1);">
+                                <!-- Question 1 -->
+                                <div class="options">
+                                    <h6>1</h6>
+                                    <p>Question 1: Why is it important to set your user information in Git?</p>
+                                    <label class="custom-radio"><input type="radio" name="q1" value="A"><span class="radio-mark"></span>To customize the Git interface</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q1" value="B"><span class="radio-mark"></span> To associate your name and email with your commits</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q1" value="C"><span class="radio-mark"></span>To improve the speed of Git operations</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q1" value="D"><span class="radio-mark"></span>To change the color scheme of the terminal</label><br>
+                                    <p class="answer" data-answer="q1">Correct Answer: B</p>
+                                </div>
+                                <!-- Question 2 -->
+                                <div class="options">
+                                    <h6>2</h6>
+                                    <p>Question 2: What command do you use to set your name in Git?</p>
+                                    <label class="custom-radio"><input type="radio" name="q2" value="A"><span class="radio-mark"></span>git set user.name "Your Name"</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q2" value="B"><span class="radio-mark"></span>git config --global user.name "Your Name"</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q2" value="C"><span class="radio-mark"></span>git update user.name "Your Name"</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q2" value="D"><span class="radio-mark"></span>git name "Your Name"</label><br>
+                                    <p class="answer" data-answer="q2">Correct Answer: B</p>
+                                </div>
+                                <!-- Question 3 -->
+                                <div class="options">
+                                    <h6>3</h6>
+                                    <p>Question 3: How can you set your preferred text editor in Git?</p>
+                                    <label class="custom-radio"><input type="radio" name="q3" value="A"><span class="radio-mark"></span>By editing a configuration file manually</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q3" value="B"><span class="radio-mark"></span>By running the command git config --global core.editor "your_editor"</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q3" value="C"><span class="radio-mark"></span>By using the Git GUI</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q3" value="D"><span class="radio-mark"></span>By reinstalling Git</label><br>
+                                    <p class="answer" data-answer="q3">Correct Answer: B</p>
+                                </div>
+                                <!-- Question 4 -->
+                                <div class="options">
+                                    <h6>4</h6>
+                                    <p>Question 4: What does the --global flag do when configuring Git?</p>
+                                    <label class="custom-radio"><input type="radio" name="q4" value="A"><span class="radio-mark"></span>It sets the configuration for only the current repository</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q4" value="B"><span class="radio-mark"></span>It makes the configuration available to all repositories on your system</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q4" value="C"><span class="radio-mark"></span>It disables all previous configurations</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q4" value="D"><span class="radio-mark"></span>It limits the configuration to public repositories only</label><br>
+                                    <p class="answer" data-answer="q4">Correct Answer: B</p>
+                                </div>
+                                <!-- Question 5 -->
+                                <div class="options">
+                                    <h6>5</h6>
+                                    <p>Question 5: How can you verify your current Git configuration?</p>
+                                    <label class="custom-radio"><input type="radio" name="q5" value="A"><span class="radio-mark"></span>By running git check-config</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q5" value="B"><span class="radio-mark"></span>By executing git config --list</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q5" value="C"><span class="radio-mark"></span>By checking the Git installation folder</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q5" value="D"><span class="radio-mark"></span>By restarting your terminal</label><br>
+                                    <p class="answer" data-answer="q5"> Correct Answer: B</p>
+                                </div>
+                                <!-- Question 6 -->
+                                <div class="options">
+                                    <h6>6</h6>
+                                    <p>Question 6: What is the first step in creating a new Git repository?</p>
+                                    <label class="custom-radio"><input type="radio" name="q6" value="A"><span class="radio-mark"></span>Running the git commit command</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q6" value="B"><span class="radio-mark"></span>Choosing and creating a directory for your project</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q6" value="C"><span class="radio-mark"></span>Installing Git</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q6" value="D"><span class="radio-mark"></span>Adding files to the repository</label><br>
+                                    <p class="answer" data-answer="q6">Correct Answer: B</p>
+                                </div>
+                                <!-- Question 7 -->
+                                <div class="options">
+                                    <h6>7</h6>
+                                    <p>Question 7: Which command initializes a new Git repository in the current directory?</p>
+                                    <label class="custom-radio"><input type="radio" name="q7" value="A"><span class="radio-mark"></span>git start</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q7" value="B"><span class="radio-mark"></span>git create</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q7" value="C"><span class="radio-mark"></span>git init</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q7" value="D"><span class="radio-mark"></span>git new</label><br>
+                                    <p class="answer" data-answer="q7">Correct Answer: C</p>
+                                </div>
+                                <!-- Question 8 -->
+                                <div class="options">
+                                    <h6>8</h6>
+                                    <p>Question 8: What does the git init command create in the project directory?</p>
+                                    <label class="custom-radio"><input type="radio" name="q8" value="A"><span class="radio-mark"></span>A README file</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q8" value="B"><span class="radio-mark"></span>A hidden .git directory</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q8" value="C"><span class="radio-mark"></span>A backup of the project files</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q8" value="D"><span class="radio-mark"></span>A user configuration file</label><br>
+                                    <p class="answer" data-answer="q8">Correct Answer: B</p>
+                                </div>
+                                <!-- Question 9 -->
+                                <div class="options">
+                                    <h6>9</h6>
+                                    <p>Question 9: How do you stage files for tracking in a Git repository?</p>
+                                    <label class="custom-radio"><input type="radio" name="q9" value="A"><span class="radio-mark"></span>By using the command git track filename.txt</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q9" value="B"><span class="radio-mark"></span>By running git stage filename.txt</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q9" value="C"><span class="radio-mark"></span>By using the command git add filename.txt</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q9" value="D"><span class="radio-mark"></span>By creating a new branch</label><br>
+                                    <p class="answer" data-answer="q9">Correct Answer: C</p>
+                                </div>
+                                <!-- Question 10 -->
+                                <div class="options">
+                                    <h6>10</h6>
+                                    <p>Question 10: What does the -m flag do in the git commit command?</p>
+                                    <label class="custom-radio"><input type="radio" name="q10" value="A"><span class="radio-mark"></span>It merges changes from another branch</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q10" value="B"><span class="radio-mark"></span>It specifies the commit message on the command line</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q10" value="C"><span class="radio-mark"></span>It modifies the existing commit</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q10" value="D"><span class="radio-mark"></span>It moves the files to a different directory</label><br>
+                                    <p class="answer" data-answer="q10">Correct Answer: B</p>
+                                </div>
+                                <div class="down">
+                                    <button type="submit" style="padding: 10px 15px;margin-left: 35px; background-color: #ee513b;border-radius: 5px; color: white;border: none;">Submit</button>
+                                    <div class="scoreDisplay"></div>
+                                </div>
+                            </form>
+                        </div>   
+                    </div>
+                </div>
+                
+                <div>
+                    <div id="section9" class="content page3">
+                        <h1>Basic git commands</h1>
+                        <h2>git init: Initializing a Repository</h2>
+                        <p>As we discussed earlier, a Git repository is a directory that contains all the files and directories of a project, along with the Git history of those files. To create a new Git repository, you'll use the git init command.</p>
+
+                        <p style="margin-top: 30px; margin-bottom: 30px;">Here’s a step-by-step guide:</p>
+                        
+                        <div class="windows">
+                            <h2 style="color: black;">Create a New Directory</h2>
+                            <p>Use your file explorer or terminal to create a new directory for your project.</p>
+                            <h2 style="color: black;">Navigate to the directory:</h2>
+                            <p>Open your terminal and use the cd command to navigate to the directory.</p>
+                                
+                            <h2 style="color: black;">Initialize the Repository</h2>
+                            <p>Run the git init command in the terminal:</p>
+                            
+                            <div class="command">
+                                <h4>bash <span style="font-weight: 100;">|</span>git init</h4>
+                            </div>
+                           <p>This command creates a hidden .git directory in your project directory. This directory stores all the necessary information for Git to track changes, manage branches, and maintain the project's history.</p>
+                            <p style="margin-top: 20px;">Once you've initialized a repository, you can start adding files, committing changes, and creating branches</p>
+                        </div>
+                    </div>
+                    <div id="section10" class="content page3">
+                        <h2>git clone: Cloning an Existing Repository</h2>
+                        <p>Cloning is the process of creating a local copy of a remote Git repository. This allows you to work on the project locally and synchronize your changes with the remote repository.
+                         </p>
+
+                        <p style="margin-top: 30px; margin-bottom: 30px;">Here's how to clone a repository:</p>
+                    
+                        <div class="windows">
+                            <h2 style="color: black;">Obtain the Repository's URL:</h2>
+                            <p>You can usually find the repository's URL on platforms like GitHub, GitLab, or Bitbucket. It typically looks like https://github.com/username/repository-name.git</p>
+                            
+                            <h2 style="color: black;">Open Your Terminal:</h2>
+                            <p>Navigate to the directory where you want to clone the repository</p>
+                                
+                            <h2 style="color: black;">Use the git clone Command:</h2>
+                            <p>Execute the following command, replacing the URL with the actual repository URL:</p>
+                           
+                            <div class="command">
+                                <h4>bash <span style="font-weight: 100;">|</span>git clone https://github.com/username/repository-name.git</h4>
+                            </div>
+                            <p>This command creates a new directory with the same name as the repository and populates it with the cloned files and the .git directory.</p>
+                            <p style="margin-top: 20px;">Once you've cloned a repository, you can start working on it locally, commit your changes, and push them to the remote repository.</p>
+                        </div>
+                    </div>
+
+                    <div id="section11" class="content page3">
+                        <h2>git add: Adding Files to the Staging Area</h2>
+                        <p>Before you can commit changes to your Git repository, you need to stage them. Staging is the process of preparing files to be included in the next commit. The git add command is used to stage files.
+                         </p>
+
+                        <p style="margin-top: 30px; margin-bottom: 30px;">How to Use git add:</p>
+                        
+                        <div class="windows">
+                            <h2 style="color: black;">Navigate to Your Repository:</h2>
+                            <p>Open your terminal and navigate to the directory of your Git repository.</p>
+                            
+                            <h2 style="color: black;">Stage a Specific File:</h2>
+                            <p>To stage a specific file, use the following command:</p>
+                                
+                            <div class="command">
+                                <h4>bash <span style="font-weight: 100;">|</span>git add filename.txt</h4>
+                            </div>
+
+                            <h2 style="color: black;">Stage Multiple Files:</h2>
+                            <p>To stage multiple files, list them after the git add command:</p>
+                            
+                            <h2 style="color: black;">Stage All Files:</h2>
+                            <p>To stage all changes in the current directory, use the following command:</p>
+                            
+                            <div class="command">
+                                <h4>bash <span style="font-weight: 100;">|</span>git add .</h4>
+                            </div>
+                            <p style="margin-top: 30px;">How to Use git add:</p>
+                        </div>
+                    </div>
+
+
+
+
+                    <div id="section12" class="content page3">
+                        <h2>git commit: Committing Changes</h2>
+                        <p>After you've staged your changes using git add, you can commit them to your Git repository. A commit is a snapshot of your project at a specific point in time.
+                         </p>
+
+                        <p style="margin-top: 30px; margin-bottom: 10px;">How to Commit Changes:</p>
+                        
+                        <div class="windows">
+                            <h2 style="color: black;">Open Your Terminal:</h2>
+                            <p>Navigate to your Git repository's directory.</p>
+                            
+                            <h2 style="color: black;">Commit the Staged Changes:</h2>
+                            <p>Use the git commit command followed by a descriptive message:</p>
+                                
+                            <div class="command">
+                                <h4>bash <span style="font-weight: 100;">|</span>git commit -m <span style="color:  #5056CE;"> “Initial commit”</span></h4>
+                            </div>
+                            <p style="margin-top: 20px">The -m flag allows you to provide a commit message on the command line.</p>                    
+                        </div>
+
+                        <h2 style="color: black;">Writing Good Commit Messages:</h2>
+                        <li>Be Clear and Concise: Use clear and concise language to describe the changes.</li>
+                        <li>Focus on the "Why": Explain the reason for the change.</li>
+                        <li>Use Present Tense: Write the message as if the action is happening now.</li>
+                        <li>Avoid Vague Messages: Be specific about the changes you made.</li>   
+                        
+                        <h2 style="color: black;">Example of a Good Commit Message:</h2>
+                        <div class="command">
+                            <h4>bash <span style="font-weight: 100;">|</span>git commit -m <span style="color:  #5056CE;">  “Added new feature to calculate the area of a circle”</span></h4>
+                        </div>
+                        <p style="margin-top: 15px;">By committing your changes regularly, you can track the history of your project and easily revert to previous versions if necessary.</p>
+                    </div>
+
+                    <div id="section13" class="content page3">
+                        <h2>Test Your Knowledge With These Questions</h2>
+                        <p>Assess yourself with all you’ve learnt and see if you understand everything!</p> 
+                        <div class="module">
+                            <h4>Question from Module 3 : Basic git Commands</h4>
+                            <form class="quizForm" onsubmit="return checkAnswers(event, 2);">
+                                <!-- Question 1 -->
+                                <div class="options">
+                                    <h6>1</h6>
+                                    <p>Question 1: What is the purpose of the git init command?</p>
+                                    <label class="custom-radio"><input type="radio" name="q1" value="A"><span class="radio-mark"></span>To create a new branch in the repository</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q1" value="B"><span class="radio-mark"></span>To initialize a new Git repository</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q1" value="C"><span class="radio-mark"></span>To merge two branches</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q1" value="D"><span class="radio-mark"></span>To clone an existing repository</label><br>
+                                    <p class="answer" data-answer="q1">Correct Answer: B</p>
+                                </div>
+                                <!-- Question 2 -->
+                                <div class="options">
+                                    <h6>2</h6>
+                                    <p>Question 2: What happens when you run the git init command in a directory?</p>
+                                    <label class="custom-radio"><input type="radio" name="q2" value="A"><span class="radio-mark"></span>It deletes all files in the directory</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q2" value="B"><span class="radio-mark"></span>It creates a hidden .git directory</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q2" value="C"><span class="radio-mark"></span>It creates a README file</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q2" value="D"><span class="radio-mark"></span>It automatically commits all existing files</label><br>
+                                    <p class="answer" data-answer="q2">Correct Answer: B</p>
+                                </div>
+                                <!-- Question 3 -->
+                                <div class="options">
+                                    <h6>3</h6>
+                                    <p>Question 3: Before running git init, what is the first step you should take?</p>
+                                    <label class="custom-radio"><input type="radio" name="q3" value="A"><span class="radio-mark"></span>Write your first commit message</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q3" value="B"><span class="radio-mark"></span>Create a new directory for your project</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q3" value="C"><span class="radio-mark"></span>Install Git on your system</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q3" value="D"><span class="radio-mark"></span>Clone an existing repository</label><br>
+                                    <p class="answer" data-answer="q3">Correct Answer: B</p>
+                                </div>
+                                <!-- Question 4 -->
+                                <div class="options">
+                                    <h6>4</h6>
+                                    <p>Question 4: Which command do you use to navigate to your project directory in the terminal?</p>
+                                    <label class="custom-radio"><input type="radio" name="q4" value="A"><span class="radio-mark"></span>git go</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q4" value="B"><span class="radio-mark"></span>cd</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q4" value="C"><span class="radio-mark"></span>dir</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q4" value="D"><span class="radio-mark"></span>ls</label><br>
+                                    <p class="answer" data-answer="q4">Correct Answer: B</p>
+                                </div>
+                            
+                                <!-- Question 5 -->
+                                <div class="options">
+                                    <h6>5</h6>
+                                    <p>Question 5: After initializing a Git repository with git init, what can you start doing next?</p>
+                                    <label class="custom-radio"><input type="radio" name="q5" value="A"><span class="radio-mark"></span>Install additional software</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q5" value="B"><span class="radio-mark"></span>Add files, commit changes, and create branches</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q5" value="C"><span class="radio-mark"></span>Share your repository on GitHub</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q5" value="D"><span class="radio-mark"></span>Remove the .git directory</label><br>
+                                    <p class="answer" data-answer="q5">Correct Answer: B</p>
+                                </div>
+                                <!-- Question 6 -->
+                                <div class="options">
+                                    <h6>6</h6>
+                                    <p>Question 6: What is the primary purpose of the git clone command?</p>
+                                    <label class="custom-radio"><input type="radio" name="q6" value="A"><span class="radio-mark"></span>To initialize a new repository</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q6" value="B"><span class="radio-mark"></span>To create a local copy of a remote Git repository</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q6" value="C"><span class="radio-mark"></span>To merge branches</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q6" value="D"><span class="radio-mark"></span>To add files to the staging area</label><br>
+                                    <p class="answer" data-answer="q6">Correct Answer: B</p>
+                                </div>
+                                <!-- Question 7 -->
+                                <div class="options">
+                                    <h6>7</h6>
+                                    <p>Question 7: Where can you typically find the URL needed for cloning a repository?</p>
+                                    <label class="custom-radio"><input type="radio" name="q7" value="A"><span class="radio-mark"></span>In the project documentation</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q7" value="B"><span class="radio-mark"></span>On the local file system</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q7" value="C"><span class="radio-mark"></span>On platforms like GitHub, GitLab, or Bitbucket</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q7" value="D"><span class="radio-mark"></span>In the .git directory</label><br>
+                                    <p class="answer" data-answer="q7">Correct Answer: C</p>
+                                </div>
+                                <!-- Question 8 -->
+                                <div class="options">
+                                    <h6>8</h6>
+                                    <p>Question 8: Which command would you use to clone a repository?</p>
+                                    <label class="custom-radio"><input type="radio" name="q8" value="A"><span class="radio-mark"></span>git copy <repository-url></label><br>
+                                    <label class="custom-radio"><input type="radio" name="q8" value="B"><span class="radio-mark"></span>git clone <repository-url></label><br>
+                                    <label class="custom-radio"><input type="radio" name="q8" value="C"><span class="radio-mark"></span>git fetch <repository-url></label><br>
+                                    <label class="custom-radio"><input type="radio" name="q8" value="D"><span class="radio-mark"></span>git download <repository-url></label><br>
+                                    <p class="answer" data-answer="q8">Correct Answer: B</p>
+                                </div>
+                                <!-- Question 9 -->
+                                <div class="options">
+                                    <h6>9</h6>
+                                    <p>Question 9: After cloning a repository, what is created in your local directory?</p>
+                                    <label class="custom-radio"><input type="radio" name="q9" value="A"><span class="radio-mark"></span>A new directory with the same name as the repository and the .git directory</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q9" value="B"><span class="radio-mark"></span>A README file only</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q9" value="C"><span class="radio-mark"></span>A backup of the original repository</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q9" value="D"><span class="radio-mark"></span>A new branch</label><br>
+                                    <p class="answer" data-answer="q9">Correct Answer: A</p>
+                                </div>
+                                <!-- Question 10 -->
+                                <div class="options">
+                                    <h6>10</h6>
+                                    <p>Question 10: What can you do after cloning a repository to your local machine?</p>
+                                    <label class="custom-radio"><input type="radio" name="q10" value="A"><span class="radio-mark"></span>You cannot make any changes</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q10" value="B"><span class="radio-mark"></span>You can start working on it locally, commit changes, and push them to the remote repository</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q10" value="C"><span class="radio-mark"></span>You can only view the files without editing</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q10" value="D"><span class="radio-mark"></span>You need to reinitialize the repository</label><br>
+                                    <p class="answer" data-answer="q10">Correct Answer: B</p>
+                                </div>
+                                <!-- Question 11 -->
+                                <div class="options">
+                                    <h6>11</h6>
+                                    <p>Question 11: What is the purpose of the git add command?</p>
+                                    <label class="custom-radio"><input type="radio" name="q11" value="A"><span class="radio-mark"></span>To commit changes to the repository</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q11" value="B"><span class="radio-mark"></span>To initialize a new repository</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q11" value="C"><span class="radio-mark"></span>To stage files for the next commit</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q11" value="D"><span class="radio-mark"></span>To merge branches</label><br>
+                                    <p class="answer" data-answer="q11">Correct Answer: C</p>
+                                </div>
+                                <!-- Question 12 -->
+                                <div class="options">
+                                    <h6>12</h6>
+                                    <p>Question 12: Which command would you use to stage a specific file named document.txt?</p>
+                                    <label class="custom-radio"><input type="radio" name="q12" value="A"><span class="radio-mark"></span>git add all.txt</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q12" value="B"><span class="radio-mark"></span>git stage document.txt</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q12" value="C"><span class="radio-mark"></span>git add document.txt</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q12" value="D"><span class="radio-mark"></span>git include document.txt</label><br>
+                                    <p class="answer" data-answer="q12">Correct Answer: C</p>
+                                </div>
+                                <!-- Question 13 -->
+                                <div class="options">
+                                    <h6>13</h6>
+                                    <p>Question 13: How can you stage multiple files at once?</p>
+                                    <label class="custom-radio"><input type="radio" name="q13" value="A"><span class="radio-mark"></span>You cannot stage multiple files; you must do them one at a time</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q13" value="B"><span class="radio-mark"></span>Use git add file1 file2 file3</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q13" value="C"><span class="radio-mark"></span>Use git stage file1 file2 file3</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q13" value="D"><span class="radio-mark"></span>Use git add *</label><br>
+                                    <p class="answer" data-answer="q13">Correct Answer: B</p>
+                                </div>
+                                <!-- Question 14 -->
+                                <div class="options">
+                                    <h6>14</h6>
+                                    <p>Question 14: What command would you use to stage all changes in the current directory?</p>
+                                    <label class="custom-radio"><input type="radio" name="q14" value="A"><span class="radio-mark"></span>git add all</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q14" value="B"><span class="radio-mark"></span>git add .</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q14" value="C"><span class="radio-mark"></span>git add *</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q14" value="D"><span class="radio-mark"></span>git stage .</label><br>
+                                    <p class="answer" data-answer="q14">Correct Answer: B</p>
+                                </div>
+                                <!-- Question 15 -->
+                                <div class="options">
+                                    <h6>15</h6>
+                                    <p>Question 15: After staging your changes using git add, what is the next step you should take?</p>
+                                    <label class="custom-radio"><input type="radio" name="q15" value="A"><span class="radio-mark"></span>Stage additional files</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q15" value="B"><span class="radio-mark"></span>Commit the changes using git commit</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q15" value="C"><span class="radio-mark"></span>Clone a new repository</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q15" value="D"><span class="radio-mark"></span>Merge branches</label><br>
+                                    <p class="answer" data-answer="q15">Correct Answer: B</p>
+                                </div>
+                                <!-- Question 16 -->
+                                <div class="options">
+                                    <h6>16</h6>
+                                    <p>Question 16: What does the git commit command do?</p>
+                                    <label class="custom-radio"><input type="radio" name="q16" value="A"><span class="radio-mark"></span>Stages files for the next commit</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q16" value="B"><span class="radio-mark"></span>Initializes a new repository</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q16" value="C"><span class="radio-mark"></span>Creates a snapshot of your project at a specific point in time</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q16" value="D"><span class="radio-mark"></span>Merges changes from one branch to another</label><br>
+                                    <p class="answer" data-answer="q16">Correct Answer: C</p>
+                                </div>
+                                <!-- Question 17 -->
+                                <div class="options">
+                                    <h6>17</h6>
+                                    <p>Question 17: Which command would you use to commit staged changes with a message?</p>
+                                    <label class="custom-radio"><input type="radio" name="q17" value="A"><span class="radio-mark"></span>git commit "Initial commit"</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q17" value="B"><span class="radio-mark"></span>git commit --message "Initial commit"</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q17" value="C"><span class="radio-mark"></span>git commit -m "Initial commit"</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q17" value=" C"><span class="radio-mark"></span>git commit --msg "Initial commit"</label><br>
+                                    <p class="answer" data-answer="q17">Correct Answer: C</p>
+                                    </div>
+                                <!-- Question 18 -->
+                                <div class="options">
+                                    <h6>18</h6>
+                                    <p>Question 18: What is the purpose of the -m flag in the git commit command?</p>
+                                    <label class="custom-radio"><input type="radio" name="q18" value="A"><span class="radio-mark"></span>It specifies the commit type</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q18" value="B"><span class="radio-mark"></span>It allows you to provide a commit message on the command line</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q18" value="C"><span class="radio-mark"></span>It merges branches</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q18" value="D"><span class="radio-mark"></span>It adds files to the staging area</label><br>
+                                    <p class="answer" data-answer="q18">Correct Answer: B</p>
+                                </div>
+                                <!-- Question 19 -->
+                                <div class="options">
+                                    <h6>19</h6>
+                                    <p>Question 19: Which of the following is a characteristic of a good commit message?</p>
+                                    <label class="custom-radio"><input type="radio" name="q19" value="A"><span class="radio-mark"></span>It should be vague and open to interpretation</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q19" value="B"><span class="radio-mark"></span>It should describe the changes made using past tense</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q19" value="C"><span class="radio-mark"></span>It should focus on the reason for the change in clear and concise language</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q19" value="D"><span class="radio-mark"></span>It should only mention the files changed</label><br>
+                                    <p class="answer" data-answer="q19">Correct Answer: C</p>
+                                </div>
+                                <!-- Question 20 -->
+                                <div class="options">
+                                    <h6>20</h6>
+                                    <p>Question 20: Why is it important to commit your changes regularly?</p>
+                                    <label class="custom-radio"><input type="radio" name="q20" value="A"><span class="radio-mark"></span>To delete previous versions of your project</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q20" value="B"><span class="radio-mark"></span>To track the history of your project and easily revert to previous versions if necessary</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q20" value="C"><span class="radio-mark"></span>To prevent other developers from accessing your code</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q20" value="D"><span class="radio-mark"></span>To initialize a new Git repository</label><br>
+                                    <p class="answer" data-answer="q20">Correct Answer: B</p>
+                                </div>
+                                <div class="down">
+                                    <button type="submit" style="padding: 10px 15px;margin-left: 35px; background-color: #ee513b;border-radius: 5px; color: white;border: none;">Submit</button>
+                                    <div class="scoreDisplay"></div>
+                                </div>
+                            </form>
+                    </div>
+                </div>
+                
+                <div>
+                    <div id="section14" class="content page4">
+                        <h1>Working with Branches</h1>
+                        <h2>git branch: Creating and Listing Branches</h2>
+                        <p>A branch in Git is a separate line of development within a repository. By creating branches, you can work on different features or bug fixes simultaneously without affecting the main development line.
+                         </p>                        
+                        <div class="windows">
+                            <h2 style="color: black;margin-top: 40px;">Creating a New Branch:</h2>
+                        </div>
+                        <div class="linux">
+                            <h4>Open Your Terminal:</h4>
+                            <p style="margin-bottom: 10px;">Navigate to your Git repository's directory.</p>
+                            <h4>Create a New Branch:</h4>
+                            <p style="margin-bottom: 10px;">Use the git branch command followed by the name of the new branch:</p>
+
+                            <div class="command">
+                                <h4>bash <span style="font-weight: 100;">|</span>git branch feature-branch</span></h4>
+                            </div>
+                            <p>This creates a new branch named feature-branch, but you're still on the previous branch.</p>
+                        </div>    
+                        <div class="windows">
+                            <h2 style="color: black;">Switching to a branch</h2>
+                        </div>
+                        <div class="linux">
+                            <h4>Checkout the New Branch:</h4>
+                            <p style="margin-bottom: 10px;">Use the git checkout command to switch to the newly created branch:</p>
+                            <div class="command">
+                                <h4>bash <span style="font-weight: 100;">|</span>git checkout feature-branch</span></h4>
+                            </div>
+                        </div> 
+
+                        <div class="windows">
+                            <h2 style="color: black;">Listing branches</h2>
+                        </div>
+                        <div class="linux">
+                            <h4>List All Branches:</h4>
+                            <p style="margin-bottom: 5px;">Use the git branch command without any arguments:</p>
+                            <div class="command">
+                                <h4>bash <span style="font-weight: 100;">|</span>git branch</span></h4>
+                            </div>
+                            <p>This will list all local branches, with an asterisk (*) indicating the currently active branch.
+                                By effectively using branches, you can organize your work, experiment with different ideas, and collaborate with others seamlessly.
+                            </p>
+                        </div> 
+                    </div>
+                    <div id="section15" class="content page4">
+                        <h2 style="margin-top: 60px;">git merge: Merging Branches</h2>
+                        <p>Merging is the process of combining changes from one branch into another. Once you've finished working on a feature branch, you can merge it back into the main branch to incorporate the changes.
+                         </p>                        
+                        <div class="windows">
+                            <h2 style="color: black;margin-top: 10px;">How to Merge Branches</h2>
+                        </div>
+                        <div class="linux">
+                            <h4>Checkout the Main Branch</h4>
+                            <p style="margin-bottom: 10px;">Use the git checkout command to switch to the main branch:</p>
+                            <div class="command">
+                                <h4>bash <span style="font-weight: 100;">|</span>git checkout main</span></h4>
+                            </div>
+                        </div>    
+
+
+                        <div class="windows">
+                            <h2 style="color: black;margin-top: 40px;">Merge the feature branch</h2>
+                        </div>
+                        <p style="margin-bottom: 10px;">Use the git merge command to merge the feature branch into the main branch:</p>
+                        <div class="command">
+                            <h4>bash <span style="font-weight: 100;">|</span>git merge feature-branch</span></h4>
+                        </div>
+
+                        <div class="windows">
+                            <h2 style="color: black;">Resolving merging conflicts</h2>
+                        </div>
+                        <p>Sometimes, when merging branches, Git may encounter conflicts. This happens when both branches have made changes to the same part of a file. To resolve conflicts:</p>
+                        
+                        <ol style="margin-top: 20px; margin-bottom: 30px;">
+                            <li>Git will highlight the conflicting sections in the file.</li>
+                            <li>Manually edit the file to resolve the conflict.</li>
+                            <li>Stage the resolved file:</li>
+                        </ol>
+
+                        <div class="command">
+                            <h4>bash <span style="font-weight: 100;">|</span>git add filename.txt</span></h4>
+                        </div>
+                        <p style="margin-top: 10px; margin-bottom: 10px;">Commit the merged changes:</p>
+                        <div class="command">
+                            <h4>bash <span style="font-weight: 100;">|</span>git commit -m  <span style="color: #5056CE;">“Merged feature-branch into main”</span></h4>
+                        </div>
+                        <p style="margin-top: 10px;">By effectively merging branches, you can integrate new features and bug fixes into your main codebase.</p>
+                    </div>                   
+                    <div id="section16" class="content page4">
+                        iv id="section13" class="content page3">
+                        <h2>Test Your Knowledge With These Questions</h2>
+                        <p>Assess yourself with all you’ve learnt and see if you understand everything!</p> 
+                        <div class="module">
+                            <h4>Question from Module 4 : Working with Branches</h4>
+                            <form class="quizForm" onsubmit="return checkAnswers(event, 3);">
+                                <!-- Question 1 -->
+                                <div class="options">
+                                    <h6>1</h6>
+                                    <p>Question 1: What is the purpose of creating branches in Git?</p>
+                                    <label class="custom-radio"><input type="radio" name="q1" value="A"><span class="radio-mark"></span>To delete old versions of files</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q1" value="B"><span class="radio-mark"></span>To create a backup of the repository</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q1" value="C"><span class="radio-mark"></span>To work on different features or bug fixes simultaneously</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q1" value="D"><span class="radio-mark"></span>To merge changes from one repository to another</label><br>
+                                    <p class="answer" data-answer="q1">Correct Answer: C</p>
+                                </div>
+                                <!-- Question 2 -->
+                                <div class="options">
+                                    <h6>2</h6>
+                                    <p>Question 2: Which command is used to create a new branch in Git?</p>
+                                    <label class="custom-radio"><input type="radio" name="q2" value="A"><span class="radio-mark"></span>git create branch &lt;branch_name&gt;</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q2" value="B"><span class="radio-mark"></span>git new branch &lt;branch_name&gt;</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q2" value="C"><span class="radio-mark"></span>git branch &lt;branch_name&gt;</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q2" value="D"><span class="radio-mark"></span>git make branch &lt;branch_name&gt;</label><br>
+                                    <p class="answer" data-answer="q2">Correct Answer: C</p>
+                                </div>
+                                <!-- Question 3 -->
+                                <div class="options">
+                                    <h6>3</h6>
+                                    <p>Question 3: After creating a new branch, which command do you use to switch to that branch?</p>
+                                    <label class="custom-radio"><input type="radio" name="q3" value="A"><span class="radio-mark"></span>git switch &lt;branch_name&gt;</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q3" value="B"><span class="radio-mark"></span>git change &lt;branch_name&gt;</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q3" value="C"><span class="radio-mark"></span>git checkout &lt;branch_name&gt;</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q3" value="D"><span class="radio-mark"></span>git move &lt;branch_name&gt;</label><br>
+                                    <p class="answer" data-answer="q3">Correct Answer: C</p>
+                                </div>
+                                <!-- Question 4 -->
+                                <div class="options">
+                                    <h6>4</h6>
+                                    <p>Question 4: How can you list all local branches in your Git repository?</p>
+                                    <label class="custom-radio"><input type="radio" name="q4" value="A"><span class="radio-mark"></span>git list branches</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q4" value="B"><span class="radio-mark"></span>git branch</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q4" value="C"><span class="radio-mark"></span>git show branches</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q4" value="D"><span class="radio-mark"></span>git display branches</label><br>
+                                    <p class="answer" data-answer="q4">Correct Answer: B</p>
+                                </div>
+                                <!-- Question 5 -->
+                                <div class="options">
+                                    <h6>5</h6>
+                                    <p>Question 5: What does an asterisk (*) indicate when you list branches using git branch?</p>
+                                    <label class="custom-radio"><input type="radio" name="q5" value="A"><span class="radio-mark"></span>The branch has uncommitted changes</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q5" value="B"><span class="radio-mark"></span>The branch is protected</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q5" value="C"><span class="radio-mark"></span>The branch is the currently active branch</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q5" value="D"><span class="radio-mark"></span>The branch is a remote branch</label><br>
+                                    <p class="answer" data-answer="q5">Correct Answer: C</p>
+                                </div>
+                                <!-- Question 6 -->
+                                <div class="options">
+                                    <h6>6</h6>
+                                    <p>Question 6: What is the purpose of merging branches in Git?</p>
+                                    <label class="custom-radio"><input type="radio" name="q6" value="A"><span class="radio-mark"></span>To delete branches</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q6" value="B"><span class="radio-mark"></span>To combine changes from one branch into another</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q6" value="C"><span class="radio-mark"></span>To create new branches</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q6" value="D"><span class="radio-mark"></span>To rename existing branches</label><br>
+                                    <p class="answer" data-answer="q6">Correct Answer: B</p>
+                                </div>
+                                <!-- Question 7 -->
+                                <div class="options">
+                                    <h6>7</h6>
+                                    <p>Question 7: Which command do you use to switch to the main branch before merging?</p>
+                                    <label class="custom-radio"><input type="radio" name="q7" value="A"><span class="radio-mark"></span>git switch main</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q7" value="B"><span class="radio-mark"></span>git change main</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q7" value="C"><span class="radio-mark"></span>git checkout main</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q7" value="D"><span class="radio-mark"></span>git activate main</label><br>
+                                    <p class="answer" data-answer="q7">Correct Answer: C</p>
+                                </div>
+                                <!-- Question 8 -->
+                                <div class="options">
+                                    <h6>8</h6>
+                                    <p>Question 8: What command is used to merge a feature branch into the main branch?</p>
+                                    <label class="custom-radio"><input type="radio" name="q8" value="A"><span class="radio-mark"></span>git combine feature-branch</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q8" value="B"><span class="radio-mark"></span>git merge feature-branch</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q8" value="C"><span class="radio-mark"></span>git add feature-branch</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q8" value="D"><span class="radio-mark"></span>git connect feature-branch</label><br>
+                                    <p class="answer" data-answer="q8">Correct Answer: B</p>
+                                </div>
+                                <!-- Question 9 -->
+                                <div class="options">
+                                    <h6>9</h6>
+                                    <p>Question 9: What happens when Git encounters a merge conflict?</p>
+                                    <label class="custom-radio"><input type="radio" name="q9" value="A"><span class="radio-mark"></span>Git automatically resolves it</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q9" value="B"><span class="radio-mark"></span>Git ignores the conflict</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q9" value="C"><span class="radio-mark"></span>Git highlights conflicting sections in the affected file</label><br>
+                                    <label class="custom-radio"><input type="radio" name="q9" value="D"><span class="radio-mark"></span>Git deletes the conflicting files</label><br>
+                                    <p class="answer" data-answer="q9">Correct Answer: C</p>
+                                </div>
+                                <!-- Question 10 -->
+                            <div class="options">
+                                <h6>10</h6>
+                                <p>Question 10: After resolving a merge conflict, what is the next step?</p>
+                                <label class="custom-radio"><input type="radio" name="q10" value="A"><span class="radio-mark"></span>Run git resolve</label><br>
+                                <label class="custom-radio"><input type="radio" name="q10" value="B"><span class="radio-mark"></span>Stage the resolved file with git add filename.txt</label><br>
+                                <label class="custom-radio"><input type="radio" name="q10" value="C"><span class="radio-mark"></span>Delete the conflicting file</label><br>
+                                <label class="custom-radio"><input type="radio" name="q10" value="D"><span class="radio-mark"></span>Create a new branch</label><br>
+                                <p class="answer" data-answer="q10">Correct Answer: B</p>
+                            </div>
+                            <div class="down">
+                                <button type="submit" style="padding: 10px 15px;margin-left: 35px; background-color: #ee513b;border-radius: 5px; color: white;border: none;">Submit</button>
+                                <div class="scoreDisplay"></div>
+                            </div>
+                            </form>
+                        </div>    
+                        <div class="scoreDisplay" style="margin-top: 20px; font-weight: bold;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/tut-page.js"></script>
+    <button onclick="scrollToTop()" class="back-to-top">&uarr;</button>
+
+    <!-- JavaScript to scroll to the top -->
+    <script>
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    </script>
+    <script src="../js/tutorial-page.js"></script>
+</body>
+
+</html>
